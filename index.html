@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#25483d"><title>شجرة عائلة صبحي الشيخ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;600;700&display=swap');
+:root{--bg:#f3f1e9;--ink:#263a35;--green:#31594c;--line:#dce2d9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;font-size:13px}
+header{background:linear-gradient(115deg,#203e36,#416b59);color:white;padding:16px clamp(13px,3vw,32px);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+h1{font:700 clamp(24px,3vw,33px) Amiri,serif;margin:0}.subtitle{font-size:11px;opacity:.85;margin-top:3px}
+button,.filebtn{border:0;border-radius:9px;padding:9px 11px;font:700 12px Tajawal,sans-serif;cursor:pointer;touch-action:manipulation;background:var(--green);color:white}
+header button{background:#ffffff20;border:1px solid #ffffff55}button.secondary,.filebtn{background:#eef3ed;color:#31594c;border:1px solid #d2ded3}button.danger{background:#fff0ed;color:#a34337;border:1px solid #eccbc5}.small{padding:5px 7px;font-size:11px}
+main{max-width:1450px;margin:16px auto;padding:0 12px 35px}.toolbar,.actions{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.toolbar{margin-bottom:11px}.search{flex:1;min-width:170px;padding:10px;border:1px solid #d7ded5;border-radius:9px;background:white;font:13px Tajawal}
+.stats{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}.stat{background:white;border:1px solid var(--line);border-radius:10px;padding:7px 11px;min-width:90px}.stat b{display:block;font-size:16px;color:#31594c}.stat span{font-size:10px;color:#78847c}
+.root-card{max-width:380px;margin:0 auto 20px;background:#fffefa;border:2px solid #c5a66e;border-radius:15px;text-align:center;padding:11px}.root-card b{display:block;font:700 23px Amiri;color:#24483c}.root-card small{font-size:11px;color:#8a744c}
+.branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:11px;align-items:start}.branch{--branch:#527c69;--branchbg:#edf4ee;background:white;border:1px solid color-mix(in srgb,var(--branch),white 68%);border-top:4px solid var(--branch);border-radius:13px;padding:9px;min-width:0}.branch>h2{font:700 19px Amiri;color:var(--branch);background:var(--branchbg);margin:-9px -9px 9px;padding:7px 10px;border-radius:9px 9px 0 0}
+.person{border:1px solid #e3e7df;border-right:3px solid var(--branch,var(--green));border-radius:9px;padding:7px;margin:6px 0;background:white;position:relative;min-width:0}.person-top{display:flex;align-items:center;justify-content:space-between;gap:6px}.person-name{font:700 15px Amiri;color:#2d4339;overflow-wrap:anywhere}.person-actions{display:flex;gap:4px;align-items:center;flex-shrink:0}.plus{width:29px;height:29px;padding:0;border-radius:8px;font-size:20px;line-height:1}
+.wife-branch{margin:7px 0 2px 3px;padding:5px 7px 5px 3px;border-right:2px solid color-mix(in srgb,var(--branch),white 35%);background:linear-gradient(90deg,transparent,var(--branchbg));border-radius:7px}.wife-name{font-size:11px;font-weight:700;color:var(--branch)}.kids{margin:5px 0 0 3px;padding-right:7px;border-right:1px dashed #b9c8bb}.empty{font-size:10px;color:#9aa49c;padding:5px}
+.action-menu{display:none;position:absolute;z-index:10;left:5px;top:40px;background:white;border:1px solid #dce3da;border-radius:10px;padding:5px;box-shadow:0 10px 22px #203c3025;min-width:140px}.action-menu.open{display:grid;gap:3px}.action-menu button{background:#f2f6f1;color:#294b3e;text-align:right;border-radius:7px;padding:9px 8px;font-size:12px}
+.tree-mode .branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:1200px;margin:auto;gap:15px;position:relative}.tree-mode .branch{padding:12px;position:relative}.tree-mode .branch>h2{text-align:center;font-size:21px}.tree-mode .branch>.person{margin-top:10px}.tree-mode .branch:before{content:"";display:block;width:1px;height:12px;background:#c6b58d;position:absolute;top:-13px;right:50%}@media(max-width:650px){.tree-mode .branches{grid-template-columns:1fr;gap:14px}}
+dialog{border:0;border-radius:15px;padding:0;width:min(92vw,420px);box-shadow:0 24px 70px #15271f55;color:var(--ink)}dialog::backdrop{background:#15271f88;backdrop-filter:blur(3px)}.modal-head{padding:11px 15px;background:#edf3ed;font:700 19px Amiri}.modal-body{padding:14px}.field{display:grid;gap:5px;margin-bottom:10px}.field label{font-size:11px;color:#627268}.field input,.field select{padding:10px;border:1px solid #d6dfd6;border-radius:8px;font:13px Tajawal;background:white}.modal-actions{display:flex;gap:7px;justify-content:flex-start;padding:0 14px 14px}.hint{font-size:11px;color:#7b887f;line-height:1.7}
+.footer-note{text-align:center;color:#78847c;font-size:10px;line-height:1.8;margin:18px 0}.toast{position:fixed;bottom:14px;left:50%;transform:translate(-50%,15px);opacity:0;background:#24483c;color:white;padding:10px 14px;border-radius:9px;transition:.2s;z-index:20;font-size:11px;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:600px){header .actions{width:100%}header .actions button{flex:1}.branches{grid-template-columns:1fr}.search{flex-basis:100%}}
+@media print{header .actions,.toolbar,.person-actions,.action-menu,.footer-note{display:none!important}body{background:white}.branches{grid-template-columns:repeat(2,1fr)}.branch,.root-card{break-inside:avoid}}
+</style></head><body>
+<header><div><h1>شجرة عائلة صبحي الشيخ</h1><div class="subtitle">فروع العائلة وأجيالها</div></div><div class="actions"><button id="listBtn">عرض القوائم</button><button id="treeBtn">عرض الشجرة</button></div></header>
+<main id="app"><div class="toolbar"><input id="search" class="search" type="search" placeholder="ابحث عن اسم في العائلة..." aria-label="البحث"><button class="secondary" id="exportBtn">تصدير نسخة</button><label class="filebtn" for="importFile">استيراد نسخة</label><input id="importFile" type="file" accept="application/json" hidden><button class="secondary" id="printBtn">طباعة</button></div>
+<div class="stats" id="stats"></div><div class="root-card"><b>صبحي الشيخ</b><small>زوجته: سعاد</small></div><div id="familyArea" class="branches"></div>
+<p class="footer-note">الحفظ التلقائي حالياً على هذا الجهاز فقط. بعد ربط قاعدة البيانات الآمنة ستظهر التعديلات نفسها لجميع أفراد العائلة، وسيكون التعديل لصاحب الحساب فقط.</p></main>
+<dialog id="editor"><div class="modal-head" id="modalTitle">إضافة فرد</div><form id="editForm"><div class="modal-body"><div class="field"><label for="nameInput">الاسم</label><input id="nameInput" required maxlength="70" autocomplete="off"></div><div class="field" id="familyField" hidden><label for="familySelect">يتبع فرع الزوج/الزوجة</label><select id="familySelect"></select></div><div class="hint" id="modalHint"></div></div><div class="modal-actions"><button type="submit">حفظ</button><button type="button" class="secondary" id="cancelBtn">إلغاء</button></div></form></dialog><div id="toast" class="toast" role="status"></div>
+<script>
+'use strict';
+const ORIGINAL={id:'root',name:'صبحي الشيخ',spouses:['سعاد'],children:[
+{id:'badi',name:'بديع',families:[{id:'fbadi',spouse:'عفيفة',children:[['badi-subhi','صبحي'],['ahmad-badi','أحمد'],['saba','صبا'],['aya','آية'],['hiba','هبة']].map(([id,name])=>({id,name,families:[]}))}]},
+{id:'mti',name:'مطيع',families:[{id:'fmt1',spouse:'زوجة 1 (الاسم غير مسجل)',children:[{id:'mti-subhi1',name:'صبحي',families:[]}]},{id:'fmt2',spouse:'زوجة 2 (الاسم غير مسجل)',children:[{id:'mti-subhi2',name:'صبحي',families:[]},{id:'noor-mti',name:'نور',families:[]}]},{id:'fmt3',spouse:'زوجة 3 (الاسم غير مسجل)',children:[{id:'tamara',name:'تمارا',families:[]}]}]},
+{id:'wadi',name:'وديع',families:[{id:'fwadi',spouse:'ميساء',children:[]}]},
+{id:'essam',name:'عصام',families:[{id:'fessam',spouse:'الاسم غير مسجل',children:[1,2,3].map(n=>({id:'essam'+n,name:'اسم غير مسجل '+n,families:[]}))}]},
+{id:'badia',name:'بديعة',families:[{id:'fbadia',spouse:'هشام (متوفى)',children:[['moh-badia','محمد'],['reem','ريم'],['rana','رنا'],['nevin','نيڤين']].map(([id,name])=>({id,name,families:[]}))}]},
+{id:'haifa',name:'هيفاء',families:[{id:'fhaifa',spouse:'غير محدد',children:[{id:'ahmad-haifa',name:'أحمد',families:[]},{id:'noor-haifa',name:'نور',families:[]}]}]},
+{id:'afaf',name:'عفاف',families:[{id:'fafaf',spouse:'وائل',children:[['shahla','شهلا'],['shahd','شهد'],['shehab','شهاب'],['shahm','شهم']].map(([id,name])=>({id,name,families:[]}))}]},
+{id:'maisa',name:'ميساء',families:[{id:'fmaisa',spouse:'عامر',children:[['emad','عماد'],['moh-maisa','محمد'],['sara','سارة']].map(([id,name])=>({id,name,families:[]}))}]},
+{id:'ahlam',name:'أحلام',families:[{id:'fahlam',spouse:'غسان',children:[['moh-ahlam','محمد'],['ahmad-ahlam','أحمد'],['omar','عمر'],['ahlam-daughter','اسم غير مسجل']].map(([id,name])=>({id,name,families:[]}))}]},
+{id:'hanan',name:'حنان',families:[{id:'fhanan',spouse:'محمد',children:[]}]},
+{id:'hasnaa',name:'حسناء',families:[{id:'fhasnaa',spouse:'الاسم غير مسجل',children:[]}]}
+]};
+const PALETTE=[['#4f806a','#edf5ef'],['#647eaa','#eef2f9'],['#a87951','#f8f0e8'],['#8b719e','#f4eff7'],['#b07878','#f9eeee'],['#568d91','#edf5f4'],['#9b874e','#f7f4e8'],['#668b9f','#edf3f7'],['#9a765c','#f6f0e9'],['#7e8c61','#f1f4eb'],['#ad7894','#f7eff4']];
+const $=id=>document.getElementById(id);let data=loadData(),mode='list',query='',pending=null;
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function loadData(){try{let x=JSON.parse(localStorage.getItem('subhiFamilyTreeV4'));if(x?.id==='root'&&Array.isArray(x.children))return x}catch(e){}return clone(ORIGINAL)}
+function saveData(){try{localStorage.setItem('subhiFamilyTreeV4',JSON.stringify(data))}catch(e){notify('تعذر الحفظ. صدّر نسخة احتياطية للاحتفاظ بالتغييرات.')}}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function id(){return 'p'+Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+function count(p){const direct=p.children||[];const byFamilies=(p.families||[]).reduce((n,f)=>n+(f.children||[]).reduce((a,c)=>a+count(c),0),0);return 1+direct.reduce((n,c)=>n+count(c),0)+byFamilies}
+function personHTML(p){let fs=(p.families||[]).map(f=>'<section class="wife-branch"><div class="wife-name">'+(f.spouse==='غير محدد'?'الزوج/الزوجة غير محدد':'الزوج/الزوجة: '+esc(f.spouse))+'</div><div class="kids">'+((f.children||[]).length?f.children.map(personHTML).join(''):'<div class="empty">لا يوجد أبناء مسجلون</div>')+'</div></section>').join('');
+return '<article class="person" data-id="'+esc(p.id)+'"><div class="person-top"><div class="person-name">'+esc(p.name)+'</div><div class="person-actions"><button class="plus" data-action="menu" data-id="'+esc(p.id)+'" aria-label="إضافة إلى '+esc(p.name)+'">+</button><button class="small secondary" data-action="edit" data-id="'+esc(p.id)+'">تعديل</button><button class="small danger" data-action="delete" data-id="'+esc(p.id)+'">حذف</button></div></div><div class="action-menu" id="menu-'+esc(p.id)+'"><button data-action="child" data-kind="ابن" data-id="'+esc(p.id)+'">إضافة ابن</button><button data-action="child" data-kind="ابنة" data-id="'+esc(p.id)+'">إضافة ابنة</button><button data-action="spouse" data-kind="زوج" data-id="'+esc(p.id)+'">إضافة زوج</button><button data-action="spouse" data-kind="زوجة" data-id="'+esc(p.id)+'">إضافة زوجة</button></div>'+fs+'</article>'}
+function render(){let area=$('familyArea');area.innerHTML='';data.children.forEach((p,i)=>{let [c,bg]=PALETTE[i%11],el=document.createElement('section');el.className='branch';el.style.setProperty('--branch',c);el.style.setProperty('--branchbg',bg);el.innerHTML='<h2>'+esc(p.name)+'</h2>'+personHTML(p);area.appendChild(el)});const total=1+data.children.reduce((n,c)=>n+count(c),0);$('stats').innerHTML='<div class="stat"><b>'+data.children.length+'</b><span>أبناء وبنات صبحي</span></div><div class="stat"><b>'+total+'</b><span>أفراد مسجلون</span></div><div class="stat"><b>'+data.children.length+'</b><span>فروع العائلة</span></div>';$('app').classList.toggle('tree-mode',mode==='tree');applySearch()}
+function find(id0,node=data){
+ if(node.id===id0)return node;
+ for(const c of node.children||[]){const x=find(id0,c);if(x)return x;}
+ for(const f of node.families||[])for(const c of f.children||[]){const x=find(id0,c);if(x)return x;}
+ return null;
+}
+function parentList(id0,node=data){
+ if((node.children||[]).some(c=>c.id===id0))return node.children;
+ for(const c of node.children||[]){const x=parentList(id0,c);if(x)return x;}
+ for(const f of node.families||[]){
+  if((f.children||[]).some(c=>c.id===id0))return f.children;
+  for(const c of f.children||[]){const x=parentList(id0,c);if(x)return x;}
+ }
+ return null;
+}
+function applySearch(){let q=query.trim().toLocaleLowerCase('ar');document.querySelectorAll('.person').forEach(el=>{let p=find(el.dataset.id);el.style.display=!q||p?.name.toLocaleLowerCase('ar').includes(q)?'':'none'});document.querySelectorAll('.branch').forEach(el=>el.style.display=!q||[...el.querySelectorAll('.person')].some(p=>p.style.display!=='none')?'':'none')}
+function notify(s){let t=$('toast');t.textContent=s;t.classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>t.classList.remove('show'),2200)}
+function editor(c){pending=c;$('modalTitle').textContent=c.title;$('modalHint').textContent=c.hint||'';$('nameInput').value=c.value||'';$('familyField').hidden=!c.chooseFamily;if(c.chooseFamily)$('familySelect').innerHTML=c.families.map((f,i)=>'<option value="'+i+'">'+esc(f.spouse)+'</option>').join('');$('editor').showModal()}
+document.addEventListener('click',e=>{let b=e.target.closest('[data-action]');if(!b){if(!e.target.closest('.action-menu'))document.querySelectorAll('.action-menu').forEach(m=>m.classList.remove('open'));return}let p=find(b.dataset.id),a=b.dataset.action;if(a==='menu'){document.querySelectorAll('.action-menu').forEach(m=>m.classList.remove('open'));$('menu-'+b.dataset.id)?.classList.toggle('open');return}if(!p)return;
+if(a==='edit')return editor({type:'edit',id:p.id,title:'تعديل الاسم',value:p.name});
+if(a==='delete'){if(confirm('حذف '+p.name+' وكل الأبناء المسجلين تحته؟')){let list=parentList(p.id),i=list?.findIndex(x=>x.id===p.id);if(i>=0){list.splice(i,1);saveData();render();notify('تم الحذف')}}return}
+if(a==='spouse')return editor({type:'spouse',id:p.id,kind:b.dataset.kind,title:'إضافة '+b.dataset.kind});
+if(a==='child'){p.families=p.families||[];if(!p.families.length)p.families.push({id:id(),spouse:'غير محدد',children:[]});editor({type:'child',id:p.id,kind:b.dataset.kind,title:'إضافة '+b.dataset.kind,chooseFamily:true,families:p.families,hint:'اختر فرع الزوج أو الزوجة الذي يتبعه الابن أو الابنة.'})}
+});
+$('editForm').addEventListener('submit',e=>{e.preventDefault();let v=$('nameInput').value.trim(),c=pending,p=find(c?.id);if(!v||!p)return;if(c.type==='edit')p.name=v;if(c.type==='spouse'){p.families=p.families||[];p.families.push({id:id(),spouse:v,children:[]})}if(c.type==='child'){let f=p.families[Number($('familySelect').value)];if(!f)return;f.children=f.children||[];f.children.push({id:id(),name:v,families:[]})}saveData();$('editor').close();pending=null;render();notify('تم الحفظ بنجاح')});
+$('cancelBtn').onclick=()=>$('editor').close();$('search').oninput=e=>{query=e.target.value;applySearch()};$('listBtn').onclick=()=>{mode='list';render()};$('treeBtn').onclick=()=>{mode='tree';render()};$('printBtn').onclick=()=>window.print();
+$('exportBtn').onclick=()=>{let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='نسخة-شجرة-صبحي.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+$('importFile').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(x.id!=='root'||!Array.isArray(x.children))throw 0;data=x;saveData();render();notify('تم استيراد النسخة')}catch(_){alert('ملف النسخة الاحتياطية غير صالح.')}e.target.value=''};
+render();
+</script></body></html>
